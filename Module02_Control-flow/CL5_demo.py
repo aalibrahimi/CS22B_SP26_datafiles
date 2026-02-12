@@ -72,5 +72,5 @@ wdict={}
 for w in words:
     if "o" in w:
         wdict[w]:len(w)
-print(words):
+print(words)
 
