@@ -26,6 +26,7 @@ else:
 	x = 2
 	d += 4+val
 print(d)
+# ANSWER: 9
 
 
 ##### CL5.3 if-elif-else 
@@ -39,6 +40,7 @@ if x != 0 and y / x > 2:
 else:
     result = "B"
 print(result)
+# ANSWER: B
 
 
 ##### CL5.4: While loop 
@@ -48,9 +50,10 @@ print(result)
 total = 0
 n = 1
 
-while total <= 50:
+while total <= 50: # ????
     total += n
     n += 1
+print(total)
 
 
 ##### CL5.5 Infinite loop
@@ -62,10 +65,15 @@ s = 10
 #    if s % 2 == 0:
 #        continue
 #    s -= 1
+while s > 0:
+   s -= 1
+   if s % 2 == 0:
+       continue
 
 
 ##### CL5.6 Dictionary comprehension and boolean filtering
 ### Given the words list below, write a dictionary comprehension that maps each word to its length only if the word contains the letter 'o'.
 
 words = ["data", "logic", "loop", "condition", "flow", "python"]
-
+new_dict = {word: len(word) for word in words if "o" in word}
+print(new_dict)
