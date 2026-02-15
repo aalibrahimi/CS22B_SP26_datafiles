@@ -82,11 +82,16 @@ def get_gene(file_name):
 
 ### step 1: import library csv and read in file
 with open("Module01_Essentials/drosphila.csv", "r", encoding="UTF-8") as csv_file:
+    Dm_ds = []
+    pattern = re.compile(r"drosophila (melanogaster|simulans)", re.IGNORECASE)
 ### step 2: Iterate through each line and split string into different variables
     for row in csv.reader(csv_file):
+        print(row)
         species, sequence, name, expression = row
 ### step 3: compare the variable that contains species name
-    #?????
+        if re.search(pattern, species):
+            Dm_ds.append(row)
+    print(Dm_ds)
     
 
 
